@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.blog-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.prose table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.prose th {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.prose td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.footnote {
+  position: absolute;
+  left: calc(100% + 1rem);
+  width: 20rem;
+  font-size: 0.875rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1200px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
   }
-}
+  
+  .sidebar {
+    position: static;
+    order: -1;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .footnote {
+    position: static;
+    width: auto;
+    margin-top: 1rem;
   }
 }
