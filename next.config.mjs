@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-      domains: [
-        "api.microlink.io", // Microlink Image Preview
-      ],
-    },
-  };
+const { withTina } = require("tinacms");
 
-export default nextConfig;
+const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
+  experimental: {
+    appDir: true,
+  },
+};
+
+module.exports = withTina(nextConfig);

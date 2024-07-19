@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-color: #0000FF;
+  --background-color: #FFF0EB;
+}
+
+html, body {
+  font-family: 'Merriweather', serif;
+  background-color: var(--background-color);
+  color: #333;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.blog-post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 3rem;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+}
+
+.blog-post-content {
+  grid-column: 1;
+  position: relative;
+}
+
+.blog-content {
+  max-width: 65ch;
+  margin: 0 auto;
+  position: relative;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footnotes-container {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 2rem);
+  width: 250px;
+}
+
+.blog-post-sidebar {
+  grid-column: 2;
+  padding-top: 2rem;
+}
+
+.table-of-contents {
+  position: sticky;
+  top: 2rem;
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* Adjust prose styles for academic look */
+.prose {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-color);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: 'Merriweather', serif;
+  color: var(--accent-color);
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+}
+
+.prose a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.prose .footnote-ref {
+  text-decoration: none;
+  background-color: var(--background-color);
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--accent-color);
+}
+
+header, footer {
+  background-color: var(--background-color);
+}
+
+@media (max-width: 1200px) {
+  .blog-post-layout {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .blog-post-sidebar, .footnotes-container {
+    grid-column: 1;
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+    left: 0;
+  }
+
+  .table-of-contents {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .prose {
+    font-size: 14px;
+  }
+  
+  .blog-post-layout {
+    padding: 1rem;
+  }
+}

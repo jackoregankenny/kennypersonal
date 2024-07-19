@@ -1,4 +1,3 @@
-// src/components/TableOfContents.tsx
 import React from 'react';
 
 type TOCItem = {
@@ -10,11 +9,10 @@ type TOCItem = {
 export function TableOfContents({ items }: { items: TOCItem[] }) {
   return (
     <nav className="toc">
-      <h2 className="text-lg font-semibold mb-2">Table of Contents</h2>
       <ul className="space-y-1">
         {items.map((item) => (
           <li key={item.id} style={{ marginLeft: `${(item.level - 2) * 0.5}rem` }}>
-            <a href={`#${item.id}`} className="text-gray-600 hover:text-gray-900">
+            <a href={`#${item.id}`} className="text-gray-600 hover:text-gray-900 no-underline">
               {item.text}
             </a>
           </li>
