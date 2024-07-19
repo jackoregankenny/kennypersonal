@@ -2,7 +2,7 @@
   "name": "kennypersonal",
   "version": "0.1.0",
   "private": true,
- "scripts": {
+  "scripts": {
     "dev": "tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "tinacms build && next start",
@@ -11,6 +11,7 @@
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.1.1",
     "@tailwindcss/typography": "^0.5.13",
+    "@tinacms/cli": "^1.5.49",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.4",
     "gray-matter": "^4.0.3",
@@ -22,7 +23,8 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "tinacms": "^1.6.7"
   },
   "devDependencies": {
     "@types/node": "^20",
