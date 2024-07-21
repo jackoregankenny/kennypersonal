@@ -1,6 +1,4 @@
-/** @type {import('next').NextConfig} */
-const { withTina } = require("tinacms");
-
+/**@type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: [
@@ -12,4 +10,7 @@ const nextConfig = {
   },
 };
 
-module.exports = withTina(nextConfig);
+export default (async () => {
+  const { withTina } = await import("tinacms");
+  return withTina(nextConfig);
+})();
