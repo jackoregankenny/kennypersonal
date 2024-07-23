@@ -1,27 +1,15 @@
-// app/resources/page.tsx
-import Link from 'next/link';
+// src/app/resources/page.tsx
+import FilterableList from '@/components/FilterableList';
+import { getResources } from '@/lib/notion';
 
-const resources = [
-  { title: "Anthropic", url: "https://www.anthropic.com" },
-  { title: "OpenAI", url: "https://www.openai.com" },
-  { title: "DeepMind", url: "https://www.deepmind.com" },
-  { title: "Google AI", url: "https://ai.google" },
-  { title: "MIT Technology Review", url: "https://www.technologyreview.com" },
-];
+export const revalidate = 3600; // Revalidate every hour
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  const resources = await getResources();
+
+  const introText = "Welcome to our curated list of resources for startups. Here you'll find tools, articles, and services that can help you build and grow your business. Use the search and filter options to find exactly what you need.";
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-[#0000FF]">Resources</h1>
-      <ul className="space-y-4">
-        {resources.map((resource, index) => (
-          <li key={index}>
-            <Link href={resource.url} className="text-[#0000FF] hover:underline">
-              {resource.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <FilterableList items={resources} introText={introText} />
   );
 }

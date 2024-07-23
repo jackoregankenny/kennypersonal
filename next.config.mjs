@@ -5,12 +5,6 @@ const nextConfig = {
       "api.microlink.io", // Microlink Image Preview
     ],
   },
-  experimental: {
-    appDir: true,
-  },
 };
 
-export default (async () => {
-  const { withTina } = await import("tinacms");
-  return withTina(nextConfig);
-})();
+export default nextConfig;

@@ -8,7 +8,7 @@ export default function Home() {
       <header className="flex items-center mb-12">
         <div className="mr-6">
           <Image 
-            src="/your-image.jpg" 
+            src="/image.png" 
             alt="Your Name" 
             width={100} 
             height={100} 
@@ -16,7 +16,7 @@ export default function Home() {
           />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-[#0000FF] mb-2">Your Name</h1>
+          <h1 className="text-3xl font-bold text-[#0000FF] mb-2">Hi, I&apos;m Jack O&apos;Regan Kenny</h1>
           <p className="text-xl text-gray-600">Currently on sabbatical</p>
         </div>
       </header>
@@ -24,8 +24,7 @@ export default function Home() {
       <section className="mb-8">
         <p className="text-gray-800 text-lg leading-relaxed">
           Hey there! I'm currently taking some time off to recharge and explore new ideas. 
-          Before my sabbatical, I was working at <Link href="https://www.anthropic.com" className="text-[#0000FF] hover:underline">Anthropic</Link>, 
-          where I focused on AI development and ethics.
+          Before I was lecturing at <Link href="https://www.software-engineering.ie" className="text-[#0000FF] hover:underline">ISE</Link>, prior to that I was MD at <Link href="https://joinpatch.org" className="text-[#0000FF] hover:underline">Patch</Link> , CEO at Mirr and Engineer in Residence at the NDRC/Dogpatchlabs
         </p>
       </section>
 

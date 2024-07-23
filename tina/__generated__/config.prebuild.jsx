@@ -19,7 +19,7 @@ var config_default = defineConfig({
       {
         name: "post",
         label: "Blog Posts",
-        path: "content/posts",
+        path: "content/bloh",
         fields: [
           {
             type: "string",
