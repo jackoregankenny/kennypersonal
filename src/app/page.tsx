@@ -23,7 +23,7 @@ export default function Home() {
 
       <section className="mb-8">
         <p className="text-gray-800 text-lg leading-relaxed">
-          Hey there! I'm currently taking some time off to recharge and explore new ideas. 
+          Hey there! I&apos;m currently taking some time off to recharge and explore new ideas. 
           Before I was lecturing at <Link href="https://www.software-engineering.ie" className="text-[#0000FF] hover:underline">ISE</Link>, prior to that I was MD at <Link href="https://joinpatch.org" className="text-[#0000FF] hover:underline">Patch</Link> , CEO at Mirr and Engineer in Residence at the NDRC/Dogpatchlabs
         </p>
       </section>
@@ -43,16 +43,16 @@ export default function Home() {
           </li>
           <li>
             <Link href="/blog/post-3" className="text-lg text-gray-800 hover:text-[#0000FF]">
-              What I've Learned During My Sabbatical
+              What I&apos;ve Learned During My Sabbatical
             </Link>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4 text-[#0000FF]">Let's Connect</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-[#0000FF]">Let&apos;s Connect</h2>
         <p className="text-gray-800 mb-4">
-          While I'm taking a break, I'm always open to interesting conversations. Feel free to reach out!
+          While I&apos;m taking a break, I&apos;m always open to interesting conversations. Feel free to reach out!
         </p>
         <Link href="mailto:your.email@example.com" className="inline-block bg-[#0000FF] text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
           Say Hello
