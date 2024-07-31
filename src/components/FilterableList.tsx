@@ -25,7 +25,7 @@ export default function FilterableList({ items, introText }: FilterableListProps
 
   const tags = useMemo(() => {
     const allTags = items.flatMap(item => item.tags).filter(tag => tag.toLowerCase());
-    return ['all', ...new Set(allTags)];
+    return ['all', ...Array.from(new Set(allTags))];
   }, [items]);
 
   const filteredItems = useMemo(() => {

@@ -1,7 +1,6 @@
 import { getPostData } from '@/lib/api';
 import { parseContent } from '@/lib/contentParser';
 import BlogPostContent from '@/components/BlogPostContent';
-import { LinkPreviewWrapper } from '@/components/LinkPreviewWrapper';
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const postData = await getPostData(params.slug);
@@ -15,7 +14,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   return (
     <>
       <BlogPostContent postData={postData} contentHtml={contentHtml} headings={headings} footnotes={footnotes} />
-      <LinkPreviewWrapper />
     </>
   );
 }

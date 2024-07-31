@@ -1,3 +1,4 @@
+// BlogPostContent.tsx
 'use client';
 
 import React from 'react';
@@ -19,7 +20,7 @@ export default function BlogPostContent({ postData, contentHtml, headings, footn
     <div className="blog-post-layout">
       <main className="blog-post-content">
         <article className="prose lg:prose-xl">
-        <h1 className="blog-title">{postData.title}</h1>
+          <h1 className="blog-title">{postData.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} className="blog-content" />
         </article>
         <div className="footnotes-container">

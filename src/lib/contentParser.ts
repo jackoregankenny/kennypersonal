@@ -19,17 +19,6 @@ export async function parseContent(content: string) {
         }
       });
 
-      visit(tree, 'link', (node: any) => {
-        node.data = {
-          hName: 'span',
-          hProperties: {
-            className: ['link-preview'],
-            'data-url': node.url,
-          },
-          hChildren: [{ type: 'text', value: node.children[0].value }],
-        };
-      });
-
       visit(tree, 'footnoteDefinition', (node: any) => {
         footnotes.push({
           id: node.identifier,
