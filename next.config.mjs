@@ -16,7 +16,6 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    appDir: true,
     serverComponentsExternalPackages: ['raw-loader'],
   },
 };
