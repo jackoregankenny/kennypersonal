@@ -17,6 +17,8 @@ Over the centuries, humans [have](https://google.com) developed various methods 
 
 One of the oldest brewing methods, Turkish coffee, involves boiling finely ground coffee in a special pot called a cezve[^2]. This method produces a strong, thick coffee often served with the grounds still in the cup.
 
+![A beautiful landscape](images/testing.jpg)
+
 ### French Press
 
 Invented in the 1920s, the French press method is beloved for its simplicity and the rich, full-bodied coffee it produces. It allows for full immersion of the coffee grounds, resulting in a robust flavor.
