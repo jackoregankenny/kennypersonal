@@ -14,13 +14,27 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  
+
+[build.environment]
+  NODE_VERSION = "16" # Adjust this to match your local Node.js version
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-  
+
 [build.processing]
-  css = { bundle = true, minify = true }
-  js = { bundle = true, minify = true }
-  html = { pretty_urls = true }
-  images = { compress = true }
+  skip_processing = true # Disable Netlify's post-processing
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
