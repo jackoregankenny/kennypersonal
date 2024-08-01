@@ -1,22 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images: {
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
-      "localhost",
-      "jackoregankenny.com" // Add any other domains you might use
-    ],
+    domains: ['jackoregankenny.com'],
   },
   webpack: (config) => {
     config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader',
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
     });
     return config;
   },
-  swcMinify: true,
-  output: 'standalone',
-};
+}
 
 export default nextConfig;
