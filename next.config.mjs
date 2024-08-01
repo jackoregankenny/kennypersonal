@@ -15,7 +15,6 @@ const nextConfig = {
     });
     return config;
   },
-  target: 'serverless', // Added target configuration
 };
 
 export default nextConfig;
