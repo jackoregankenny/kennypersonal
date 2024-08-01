@@ -1,6 +1,16 @@
 [[redirects]]
+  from = "/_next/static/*"
+  to = "/_next/static/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
   from = "/*"
-  to = "/"
+  to = "/index.html"
   status = 200
 
 [[headers]]
@@ -23,15 +33,15 @@
   package = "@netlify/plugin-nextjs"
 
 [build.processing]
-  skip_processing = true # Disable Netlify's post-processing
+  skip_processing = false
 
 [build.processing.css]
-  bundle = false
-  minify = false
+  bundle = true
+  minify = true
 
 [build.processing.js]
-  bundle = false
-  minify = false
+  bundle = true
+  minify = true
 
 [build.processing.html]
   pretty_urls = true

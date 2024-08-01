@@ -15,6 +15,8 @@ const nextConfig = {
     });
     return config;
   },
+  swcMinify: true,
+  output: 'standalone',
 };
 
 export default nextConfig;
