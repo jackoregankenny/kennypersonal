@@ -3,11 +3,16 @@ import { motion, useAnimation } from 'framer-motion';
 
 const MAX_VISIBLE_LENGTH = 150;
 
-export function Footnote({ id, content }) {
+interface FootnoteProps {
+  id: string;
+  content: string;
+}
+
+export function Footnote({ id, content }: FootnoteProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isWideScreen, setIsWideScreen] = useState(false);
   const controls = useAnimation();
-  const footnoteRef = useRef(null);
+  const footnoteRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const checkScreenWidth = () => setIsWideScreen(window.innerWidth >= 1000);
