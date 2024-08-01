@@ -7,9 +7,8 @@ export function Footer() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <p className="text-sm text-gray-600">© {new Date().getFullYear()} Your Name</p>
         <ul className="flex space-x-6">
-          <li><Link href="https://twitter.com/yourusername" className="text-gray-600 hover:text-[#0000FF]">Twitter</Link></li>
-          <li><Link href="https://github.com/yourusername" className="text-gray-600 hover:text-[#0000FF]">GitHub</Link></li>
-          <li><Link href="/rss.xml" className="text-gray-600 hover:text-[#0000FF]">RSS</Link></li>
+          <li><Link href="https://twitter.com/jackoregankenny" className="text-gray-600 hover:text-[#0000FF]">Twitter</Link></li>
+          <li><Link href="https://github.com/jackoregankenny" className="text-gray-600 hover:text-[#0000FF]">GitHub</Link></li>
         </ul>
       </div>
     </footer>
