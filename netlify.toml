@@ -16,7 +16,7 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "16" # Adjust this to match your local Node.js version
+  NODE_VERSION = "18" # Adjust this to match your local Node.js version
   NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
