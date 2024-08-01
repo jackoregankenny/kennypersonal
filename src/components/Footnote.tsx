@@ -1,35 +1,44 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const MAX_VISIBLE_LENGTH = 150;
 
-export function Footnote({ id, content }: { id: string; content: string }) {
-  const [top, setTop] = useState<number | null>(null);
+export function Footnote({ id, content }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isWideScreen, setIsWideScreen] = useState(false);
   const controls = useAnimation();
+  const footnoteRef = useRef(null);
 
   useEffect(() => {
-    const footnoteRef = document.getElementById(`fnref-${id}`);
-    
-    const updatePosition = () => {
-      if (footnoteRef) {
-        const rect = footnoteRef.getBoundingClientRect();
-        setTop(rect.top + window.scrollY);
-        controls.start({ y: [10, 0], transition: { type: 'spring', stiffness: 300, damping: 20 } });
+    const checkScreenWidth = () => setIsWideScreen(window.innerWidth >= 1000);
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+    return () => window.removeEventListener('resize', checkScreenWidth);
+  }, []);
+
+  useEffect(() => {
+    if (isWideScreen) {
+      const footnoteRefElement = document.getElementById(`fnref-${id}`);
+      const footnoteColumn = document.querySelector('.footnotes-column');
+
+      if (footnoteRefElement && footnoteColumn && footnoteRef.current) {
+        const refRect = footnoteRefElement.getBoundingClientRect();
+        const columnRect = footnoteColumn.getBoundingClientRect();
+
+        const topPosition = Math.min(
+          Math.max(refRect.top + window.scrollY, columnRect.top),
+          columnRect.bottom - footnoteRef.current.offsetHeight - 10 // Add some buffer to avoid cutoff
+        );
+
+        controls.start({
+          top: topPosition,
+          transition: { type: 'spring', stiffness: 300, damping: 20 }
+        });
       }
-    };
-
-    updatePosition();
-    window.addEventListener('resize', updatePosition);
-    window.addEventListener('scroll', updatePosition);
-
-    return () => {
-      window.removeEventListener('resize', updatePosition);
-      window.removeEventListener('scroll', updatePosition);
-    };
-  }, [id, controls]);
+    } else {
+      controls.start({ top: 'auto' });
+    }
+  }, [id, controls, isWideScreen]);
 
   const shouldTruncate = content.length > MAX_VISIBLE_LENGTH;
   const displayContent = shouldTruncate && !isExpanded
@@ -38,28 +47,17 @@ export function Footnote({ id, content }: { id: string; content: string }) {
 
   return (
     <motion.div 
+      ref={footnoteRef}
       id={`fn-${id}`}
-      className="footnote"
-      style={{
-        position: top !== null ? 'absolute' : 'static',
-        top: top !== null ? `${top}px` : 'auto',
-        width: '100%',
-        fontSize: '0.9rem',
-        lineHeight: '1.6',
-        padding: '0.75rem',
-        backgroundColor: '#FFF0EB',
-        borderLeft: '2px solid #0000FF',
-        boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-        marginBottom: '1rem',
-      }}
-      whileHover={{ scale: 1.02, boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+      className={`footnote ${isWideScreen ? 'footnote-wide' : 'footnote-narrow'}`}
       animate={controls}
+      style={{ position: isWideScreen ? 'absolute' : 'static' }}
     >
-      <sup>{id}</sup> {displayContent}
+      <sup>{id}</sup> <span dangerouslySetInnerHTML={{ __html: displayContent }} />
       {shouldTruncate && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-[#0000FF] hover:text-blue-700 text-sm mt-1 block"
+          className="text-blue-500 hover:text-blue-700 text-sm mt-1 block"
         >
           {isExpanded ? 'Read less' : 'Read more'}
         </button>
