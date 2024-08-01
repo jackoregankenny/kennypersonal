@@ -14,6 +14,13 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  
+[build.processing]
+  css = { bundle = true, minify = true }
+  js = { bundle = true, minify = true }
+  html = { pretty_urls = true }
+  images = { compress = true }
