@@ -1,6 +1,25 @@
 // app/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to Jack O'Regan Kenny's personal site. Discover my thoughts, projects, and tools.",
+  openGraph: {
+    title: "Jack O'Regan Kenny - Personal Site",
+    description: "Welcome to Jack O'Regan Kenny's personal site. Discover my thoughts, projects, and tools.",
+    images: [
+      {
+        url: 'https://jackoregankenny.com/og-image-home.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Jack O'Regan Kenny",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

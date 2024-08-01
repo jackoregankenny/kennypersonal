@@ -72,6 +72,7 @@ export function getPostData(slug: string) {
   return {
     slug,
     content,
+    excerpt: matterResult.data.excerpt || `Read more about ${matterResult.data.title}`,
     ...(matterResult.data as { date: string; title: string })
   }
 }

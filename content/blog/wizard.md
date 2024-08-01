@@ -1,6 +1,7 @@
 ---
-title: "The Art of Coffee Brewing: A Journey Through Time and Taste"
-date: "2023-07-23"
+title: 'Your Blog Post Title'
+date: '2023-07-14'
+excerpt: 'Optional: A brief summary of your blog post content'
 ---
 
 Coffee, the aromatic elixir that fuels millions around the world, has a rich history and an even richer flavor profile. In this post, we'll explore the fascinating world of coffee brewing, from its ancient origins to modern techniques.
