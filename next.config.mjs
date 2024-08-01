@@ -15,9 +15,7 @@ const nextConfig = {
     });
     return config;
   },
-  experimental: {
-    serverComponentsExternalPackages: ['raw-loader'],
-  },
+  target: 'serverless', // Added target configuration
 };
 
 export default nextConfig;
