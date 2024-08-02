@@ -1,0 +1,37 @@
+{
+    "articles": [
+      {
+        "title": "The Future of AI in Healthcare",
+        "slug": "ai-healthcare",
+        "link": "https://example.com/articles/ai-healthcare",
+        "description": "Exploring the potential impact of artificial intelligence on medical diagnosis and treatment.",
+        "keywords": ["AI", "Healthcare", "Technology"],
+        "date": "2024-07-15",
+        "author": "Jane Doe",
+        "imageUrl": "/images/ai-healthcare.jpg",
+        "imageAlt": "AI in healthcare illustration"
+      },
+      {
+        "title": "Sustainable Energy Solutions",
+        "slug": "sustainable-energy",
+        "link": "https://example.com/articles/sustainable-energy",
+        "description": "An overview of emerging technologies in renewable energy production and storage.",
+        "keywords": ["Environment", "Energy", "Sustainability"],
+        "date": "2024-06-22",
+        "author": "John Smith",
+        "imageUrl": "/images/sustainable-energy.jpg",
+        "imageAlt": "Renewable energy sources"
+      },
+      {
+        "title": "The Rise of Quantum Computing",
+        "slug": "quantum-computing",
+        "link": "https://example.com/articles/quantum-computing",
+        "description": "Understanding the principles and potential applications of quantum computing technology.",
+        "keywords": ["Technology", "Quantum Computing", "Computer Science"],
+        "date": "2024-05-10",
+        "author": "Alice Johnson",
+        "imageUrl": "/images/quantum-computing.jpg",
+        "imageAlt": "Quantum computer conceptual image"
+      }
+    ]
+  }
