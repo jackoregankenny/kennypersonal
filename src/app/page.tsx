@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl">
+    <div className="container mx-auto sm:mt-12 px-4 py-12 max-w-2xl">
       <header className="flex items-center mb-12">
         <div className="mr-6">
           <Image 

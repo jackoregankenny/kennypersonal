@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { TableOfContents } from '@/components/TableOfContents';
 import { Footnote } from '@/components/Footnote';
+import { Table, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface BlogPostContentProps {
   postData: {
@@ -37,7 +39,7 @@ export default function BlogPostContent({ postData, contentHtml, headings, footn
     <div className="container mb-28">
       <div className="blog-post-layout">
         <aside className="table-of-contents-column">
-          <TableOfContents items={headings} />
+          {!isMobile && <TableOfContents items={headings} />}
         </aside>
         
         <main className="blog-post-content">
@@ -56,22 +58,31 @@ export default function BlogPostContent({ postData, contentHtml, headings, footn
 
       {isMobile && (
         <>
-          <button 
-            className="toc-button" 
-            onClick={() => setIsTocOpen(!isTocOpen)} 
-            aria-label="Toggle Table of Contents"
+          <motion.button 
+            onClick={() => setIsTocOpen(!isTocOpen)}
+            className="fixed bottom-4 right-4 p-2 bg-[#0000FF] text-white rounded-full shadow-lg z-50"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label={isTocOpen ? "Close table of contents" : "Open table of contents"}
           >
-            ToC
-          </button>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={isTocOpen ? "close" : "open"}
+                initial={{ opacity: 0, rotate: isTocOpen ? -180 : 180 }}
+                animate={{ opacity: 1, rotate: 0 }}
+                exit={{ opacity: 0, rotate: isTocOpen ? 180 : -180 }}
+                transition={{ duration: 0.2 }}
+              >
+                {isTocOpen ? <X size={24} /> : <Table size={24} />}
+              </motion.div>
+            </AnimatePresence>
+          </motion.button>
 
-          {isTocOpen && (
-            <div className="toc-modal" onClick={() => setIsTocOpen(false)}>
-              <div className="toc-modal-content" onClick={e => e.stopPropagation()}>
-                <h2 className="text-lg font-semibold mb-2">Table of Contents</h2>
-                <TableOfContents items={headings} />
-              </div>
-            </div>
-          )}
+          <AnimatePresence>
+            {isTocOpen && (
+              <TableOfContents items={headings} isOpen={isTocOpen} onClose={() => setIsTocOpen(false)} />
+            )}
+          </AnimatePresence>
         </>
       )}
     </div>
