@@ -1,7 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 
-const ArticleCard = ({ article }) => (
+interface Article {
+  title: string;
+  link: string;
+  description: string;
+  keywords?: string[];
+  date: string;
+  author: string;
+  imageUrl?: string;
+  imageAlt?: string;
+}
+
+const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-4">
     <div className="p-4">
       <Image 
@@ -23,7 +34,7 @@ const ArticleCard = ({ article }) => (
       <div className="flex flex-wrap justify-between items-center">
         <div>
           {article.keywords && article.keywords.map((keyword, index) => (
-            <span key={index} className=" text-gray-700 px-2 py-1 rounded-full text-sm mr-2 mb-2">
+            <span key={index} className="text-gray-700 px-2 py-1 rounded-full text-sm mr-2 mb-2">
               {keyword}
             </span>
           ))}
@@ -37,7 +48,7 @@ const ArticleCard = ({ article }) => (
   </div>
 );
 
-async function getArticles() {
+async function getArticles(): Promise<Article[]> {
   const isProduction = process.env.NODE_ENV === 'production';
   const baseUrl = isProduction ? 'https://jackoregankenny.com' : '';
   
@@ -57,7 +68,7 @@ async function getArticles() {
 export async function generateMetadata() {
   const pageTitle = "Latest Articles";
   const pageDescription = "Explore our collection of insightful articles on various topics.";
-  const canonicalUrl = "https://jackoregankenny.com/articles.json";
+  const canonicalUrl = "https://jackoregankenny.com/articles";
 
   return {
     title: pageTitle,
@@ -75,7 +86,7 @@ export async function generateMetadata() {
 }
 
 export default async function ArticlesSection() {
-  const articles = await getArticles();
+  const articles: Article[] = await getArticles();
   const pageTitle = "Latest Articles";
 
   return (
@@ -84,7 +95,7 @@ export default async function ArticlesSection() {
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white sm:text-center md:text-left">
           {pageTitle}
         </h1>
-        {articles && articles.length > 0 ? (
+        {articles.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article, index) => (
               <ArticleCard key={index} article={article} />
@@ -94,7 +105,7 @@ export default async function ArticlesSection() {
           <p className="text-center text-gray-600 dark:text-gray-300">No articles found. Check back later!</p>
         )}
       </div>
-      {articles && articles.length > 0 && (
+      {articles.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

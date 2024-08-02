@@ -15,6 +15,7 @@
 
 html, body {
   font-family: 'Merriweather', serif;
+  font-size: 14px;
   background-color: var(--background-color);
   color: #333;
   overflow-x: hidden;
@@ -40,7 +41,6 @@ body {
 
 .blog-post-content {
   grid-column: 2;
-  max-width: 100%;
 }
 
 .blog-content {
@@ -57,7 +57,7 @@ body {
 
 .table-of-contents-column {
   grid-column: 1;
-  position: relative;
+  position: sticky;
 }
 
 .table-of-contents {
@@ -110,12 +110,12 @@ body {
   border-left: 2px solid var(--accent-color);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
-  width: 100%; /* Make footnotes fill their container */
-  max-width: 100%; /* Ensure footnotes don't exceed column width */
+  width: 70%; /* Make footnotes fill their container */
+  max-width: 80%; /* Ensure footnotes don't exceed column width */
 }
 
 .footnote-wide {
-  position: absolute;
+  position: relative;
   left: 0; /* Align to the left of the footnotes column */
   width: 100%; /* Full width of the footnotes column */
 }
@@ -232,4 +232,8 @@ body {
   .blog-title {
     font-size: 2rem;
   }
+}
+
+img {
+  border-radius: 2rem;
 }
