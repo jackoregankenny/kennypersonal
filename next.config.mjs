@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['jackoregankenny.com'],
+    domains: ['jackoregankenny.com','microlink.io'],
   },
   webpack: (config) => {
     config.module.rules.push({
