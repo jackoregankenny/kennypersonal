@@ -1,52 +1,132 @@
 {
   "articles": [
     {
-      "title": "The Future of Artificial bigman",
-      "link": "https://www.technologyreview.com/2023/03/08/1069450/artificial-intelligence-revolution/",
-      "description": "Exploring the potential impacts and advancements in AI technology over the next decade.",
-      "keywords": ["AI", "technology", "future"],
-      "date": "2023-08-01",
-      "author": "John Smith"
+      "title": "Watching my mother juggle her palette, phone and mirror, I knew that there had to be a better way",
+      "link": "https://www.independent.ie/irish-news/watching-my-mother-juggle-her-palette-phone-and-mirror-i-knew-that-there-had-to-be-a-better-way/a1258865679.html",
+      "description": "Jack O'Regan Kenny was watching his mother follow an online make-up tutorial when he had a brain wave.",
+      "keywords": ["Jack O'Reagn Kenny", "Mirr"],
+      "date": "2023-05-04",
+      "author": "Arlene Harris"
     },
     {
-      "title": "Climate Change: A Global Crisis",
-      "link": "https://www.nationalgeographic.com/environment/article/global-warming-overview",
-      "description": "An in-depth look at the causes and effects of climate change on our planet.",
-      "keywords": ["climate change", "environment", "global warming"],
-      "date": "2023-07-28",
-      "author": "Emma Johnson"
+      "title": "We try and distill a Silicon Valley mindset into Irish people ...",
+      "link": "https://irishtechnews.ie/jack-oregan-kenny-managing-director-of-patch/",
+      "description": "We try and distill a Silicon Valley mindset into Irish people Jack O'Regan Kenny, Managing Director of Patch ... Jack O'Regan Kenny, the Managing ...",
+      "keywords": ["Patch", "Jack O'Regan Kenny"],
+      "date": "2023-08-15",
+      "author": "https://irishtechnews.ie/author/tec-dr/"
     },
     {
-      "title": "The Rise of Remote Work",
-      "link": "https://www.forbes.com/sites/forbestechcouncil/2023/03/16/the-future-of-remote-work-in-2023-and-beyond/",
-      "description": "How the pandemic has transformed the way we work and what it means for the future.",
-      "keywords": ["remote work", "business", "technology"],
-      "date": "2023-07-25",
-      "author": "Michael Brown"
+      "title": "Top jobs you can land in Ireland without a degree",
+      "link": "https://www.thetimes.com/article/top-jobs-you-can-land-in-ireland-without-a-degree-lzvj3lh7s",
+      "description": "Stellar success of tech and business pioneers proves that you don't always need a degree to make your fortune",
+      "keywords": [],
+      "date": "2023-09-03",
+      "author": "Patrick O'Donoghue"
     },
     {
-      "title": "Advancements in Quantum Computing",
-      "link": "https://www.ibm.com/quantum/quantum-computing",
-      "description": "Recent breakthroughs in quantum computing and their potential applications.",
-      "keywords": ["quantum computing", "technology", "physics"],
-      "date": "2023-07-22",
-      "author": "Sarah Lee"
+      "title": "Mirr Tech Start-Up Podcast Featuring Jack O'Regan Kenny",
+      "link": "https://council.ie/mirr-tech-start-up-podcast-featuring-jack-oregan-kenny/",
+      "description": "As mentioned, https://twitter.com/jackoregankenny is the co-founder of the Irish tech startup https://mirr.tech/, which has patented and developed a new touchscreen smart mirror. It looks like a reflective mirror, but has the full functionality of a tablet. Jack founded the company along with https://twitter.com/aliceshaugh in 2019.",
+      "keywords": [],
+      "date": "2021-06-21",
+      "author": ""
     },
     {
-      "title": "The Impact of Social Media on Mental Health",
-      "link": "https://www.psychologytoday.com/us/blog/digital-world-real-world/202002/social-media-and-mental-health",
-      "description": "Examining the psychological effects of social media usage in the digital age.",
-      "keywords": ["social media", "mental health", "psychology"],
-      "date": "2023-07-19",
-      "author": "Dr. Alex Chen"
+      "title": "Programme for young entrepreneurs attracts most diverse cohort to date",
+      "link": "https://www.rte.ie/news/business/2023/0720/1395524-patch-accelerator-programme/",
+      "description": "Patch, an accelerator programme for young entrepreneurs, said this year's summer course has attracted the most diverse group of participants to date.",
+      "keywords": ["Jack O'Regan Kenny", "Managing Director of Patch"],
+      "date": "2023-07-20",
+      "author": ""
     },
     {
-      "title": "Exploring Mars: The Latest Discoveries",
-      "link": "https://mars.nasa.gov/news/",
-      "description": "Recent findings from Mars exploration missions and what they tell us about the red planet.",
-      "keywords": ["Mars", "space exploration", "astronomy"],
-      "date": "2023-07-16",
-      "author": "Emily Wilson"
+      "title": "30 under 30",
+      "link": "https://www.businesspost.ie/connected/30-under-30-the-ones-to-watch/",
+      "description": "",
+      "keywords": [],
+      "date": "",
+      "author": ""
+    },
+    {
+      "title": "30 under 30: The bright young stars of Ireland's tech scene",
+      "link": "https://www.businesspost.ie/tech/30-under-30-the-bright-young-stars-of-irelands-tech-scene/#:~:text=O'Regan%20Kenny%20has%20a,and%20was%20acquired%20in%202022.",
+      "description": "",
+      "keywords": [],
+      "date": "",
+      "author": "https://www.businesspost.ie/elaine-burke/"
+    },
+    {
+      "title": "Times: 50 people to watch in 2022: The best young talent in Ireland",
+      "link": "https://www.irishtimes.com/life-and-style/people/50-people-to-watch-in-2022-the-best-young-talent-in-ireland-1.4757081",
+      "description": "Mirr The teenage cofounders of smart mirror company Mirr could have a bright future ahead of them. Alice Shaughnessy and Jack O'Regan Kenny came up with Mirr, a space-saving, smart surface",
+      "keywords": [],
+      "date": "",
+      "author": ""
+    },
+    {
+      "title": "Patch accelerator seeks Ireland's next top tech entrepreneurs",
+      "link": "https://www.siliconrepublic.com/start-ups/patch-accelerator-ireland-young-entrepreneurs-2023-cohort",
+      "description": "Led by entrepreneur Jack O'Regan Kenny, Patch is on the hunt for Ireland's next John or Patrick Collison through its latest summer accelerator cohort.",
+      "keywords": [],
+      "date": "",
+      "author": "Vish Gain"
+    },
+    {
+      "title": "Jack O'Regan Kenny takes helm at Patch",
+      "link": "",
+      "description": "Jack O'Regan Kenny is taking the helm as managing director while founder Tom McCarthy becomes chair.",
+      "keywords": [],
+      "date": "2023-03-21",
+      "author": "Vish Gain"
+    },
+    {
+      "title": "Ireland's future founders: How Patch is shaping young minds",
+      "link": "https://www.siliconrepublic.com/start-ups/patch-accelerator-programme-dogpatch-labs-dublin-jack-oregan-kenny",
+      "description": "Patch is a one-of-a-kind accelerator for young entrepreneurs aged 15 to 21. And at its heart is a commitment to making innovation more accessible.",
+      "keywords": [],
+      "date": "",
+      "author": "Vish Gain"
+    },
+    {
+      "title": "Teen entrepreneurs see success with code and mirrors",
+      "link": "",
+      "description": "",
+      "keywords": [],
+      "date": "2020-12-14",
+      "author": ""
+    },
+    {
+      "title": "Patch marks 4th accelerator with 120+ alumni community",
+      "link": "https://dogpatchlabs.com/newsroom/",
+      "description": "Patch celebrates its fourth accelerator program, adding 30 young minds to its alumni community.",
+      "keywords": ["Patch", "Alumni"],
+      "date": "2022",
+      "author": "Dogpatch Labs"
+    },
+    {
+      "title": "Youth accelerator Patch announces its most diverse cohort to date for 2023",
+      "link": "https://irishtechnews.ie/youth-accelerator-patch-announces-its-most-diverse-cohort-to-date-for-2023/",
+      "description": "Patch's 2023 cohort includes a diverse group of young entrepreneurs.",
+      "keywords": ["Patch", "Jack O'Regan Kenny"],
+      "date": "2023",
+      "author": "Irish Tech News"
+    },
+    {
+      "title": "Being a young tech founder in Ireland: 'When I'm working on lots of things, I'll forget to hang out with friends'",
+      "link": "https://omny.fm/shows/the-big-tech-show/being-a-young-tech-founder-in-ireland-when-im-work/embed?style=Cover",
+      "description": "Jack O'Regan Kenny discusses his experience as a young tech founder and managing director of Patch.",
+      "keywords": ["Jack O'Regan Kenny", "Patch"],
+      "date": "2023-05",
+      "author": "Adrian Weckler"
+    },
+    {
+      "title": "Women account for almost 50% of Patch 2023 accelerator cohort",
+      "link": "https://www.thinkbusiness.ie/articles/patch-2023-cohort-diversity/",
+      "description": "As someone who has participated in Patch myself, I know first-hand the dedication required and world-class support you get as a young entrepreneur – it's invaluable to growing an idea in your phone notes, to something impactful,",
+      "keywords": [],
+      "date": "",
+      "author": ""
     }
   ]
 }
