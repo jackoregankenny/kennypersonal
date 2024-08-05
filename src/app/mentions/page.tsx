@@ -12,24 +12,32 @@ interface Article {
   imageAlt?: string;
 }
 
-const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
-  const hasImage = article.imageUrl || article.link;
+interface Article {
+  title: string;
+  link: string;
+  description: string;
+  keywords?: string[];
+  date: string;
+  author: string;
+  imageUrl?: string;
+  imageAlt?: string;
+}
 
+const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-4">
-      {hasImage && (
-        <div className="p-4">
-          <Image 
-            src={article.imageUrl || `https://api.microlink.io?url=${encodeURIComponent(article.link)}&screenshot=true&meta=false&embed=screenshot.url`}
-            alt={article.imageAlt || `Screenshot of ${article.title}`}
-            width={300}
-            height={200}
-            layout="responsive"
-            className="rounded-lg"
-          />
-        </div>
-      )}
       <div className="p-4">
+        {article.imageUrl && (
+          <div className="mb-4 relative h-48">
+            <Image 
+              src={article.imageUrl}
+              alt={article.imageAlt || `Image for ${article.title}`}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        )}
         <h3 className="text-xl font-semibold mt-2">
           <a href={article.link} className="text-blue-600 hover:underline">
             {article.title}
@@ -57,12 +65,12 @@ async function getArticles(): Promise<Article[]> {
   const isProduction = process.env.NODE_ENV === 'production';
   const url = isProduction 
     ? 'https://jackoregankenny.netlify.app/articles.json'
-    : 'http://localhost:3000/articles.json';
+    : '/articles.json';
 
   console.log('Fetching articles from:', url);
 
   try {
-    const res = await fetch(url, { next: { revalidate: 3600 } }); // Cache for 1 hour
+    const res = await fetch(url, { next: { revalidate: 3600 } });
     
     if (!res.ok) {
       throw new Error(`Failed to fetch articles: ${res.status} ${res.statusText}`);
@@ -71,7 +79,7 @@ async function getArticles(): Promise<Article[]> {
     const data = await res.json();
     console.log('Fetched data:', data);
     
-    // Ensure we have an array of articles, even if the structure isn't exactly as expected
+    // Ensure we have an array of articles
     const articles = Array.isArray(data) ? data : data.articles || [];
     
     return articles.map((article: any) => ({

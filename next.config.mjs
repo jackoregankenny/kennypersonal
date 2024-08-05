@@ -3,7 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['jackoregankenny.com','microlink.io'],
+    domains: ['jackoregankenny.com', 'microlink.io'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   webpack: (config) => {
     config.module.rules.push({
@@ -12,6 +18,6 @@ const nextConfig = {
     });
     return config;
   },
-}
+};
 
 export default nextConfig;
