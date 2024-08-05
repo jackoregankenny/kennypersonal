@@ -1,6 +1,7 @@
 // app/layout.tsx
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import LastUpdatedFooter from '@/components/LastUpdated';
 import '@/styles/globals.css';
 import'../styles/globals.css';
 import { Metadata } from 'next';
