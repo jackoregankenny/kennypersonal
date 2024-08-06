@@ -156,6 +156,11 @@ body {
   color: var(--accent-color);
   text-decoration: underline;
 }
+.prose pre {
+  background-color: transparent; /* Remove background from inline code */
+  padding: 0;
+  color: inherit;
+}
 
 /* Responsive styles */
 @media (max-width: 1200px) {
