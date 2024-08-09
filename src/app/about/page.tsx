@@ -46,10 +46,10 @@ export default function About() {
             <strong>Engineer in Residence at NDRC/Dogpatchlabs:</strong> I built internal tools and supported due diligence for emerging tech startups.
           </li>
           <li>
-            <strong>Contract Engineer for 6W:</strong> [Your role and achievements here]
+            <strong>Contract Engineer for 6W</strong> 
           </li>
           <li>
-            <strong>Founder at VC Hunt:</strong> [Your experience and focus here]
+            <strong>Founder at VC Hunt</strong> 
           </li>
         </ul>
       </section>
