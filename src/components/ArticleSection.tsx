@@ -55,7 +55,7 @@ const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
 async function getArticles(): Promise<Article[]> {
   const isProduction = process.env.NODE_ENV === 'production';
   const url = isProduction 
-    ? 'https://jackoregankenny.netlify.app/articles.json'
+    ? 'https://jackoregankenny.com/articles.json'
     : '/articles.json';
 
   console.log('Fetching articles from:', url);
