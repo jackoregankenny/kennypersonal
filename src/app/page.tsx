@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="space-y-8 mb-16">
         <p className="text-gray-800 text-lg leading-relaxed">
-          Right now I&apos;m unemployed and loving it, last month I finished lecturing at the <Link href="https://softwareengineering.ie" className="text-[#0000FF] hover:underline">ISE</Link> at UL
+          Right now I&apos;m looking for my next thing, last month I finished lecturing at the <Link href="https://softwareengineering.ie" className="text-[#0000FF] hover:underline">ISE</Link> at UL
         </p>
         <p className="text-gray-800 text-lg leading-relaxed">
           Previously I was MD at <Link href="https://joinpatch.org" className="text-[#0000FF] hover:underline">Patch</Link>, Engineer in Resident at <Link href="https://dogpatchlabs.com" className="text-[#0000FF] hover:underline">Dogpatch Labs</Link>/ <Link href="https://ndrc.ie" className="text-[#0000FF] hover:underline">NDRC</Link> and CEO at Mirr

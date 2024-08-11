@@ -31,7 +31,7 @@ export default function About() {
       </section>
       
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-[#0000FF]">My Journey</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-[#0000FF]">My Work</h2>
         <ul className="space-y-4 text-gray-800 text-lg">
           <li>
             <strong>Lecturer at ISE:</strong> I supported the Immersive Software Engineering program, teaching hardware, 3D printing, communications, and computer architecture as part of an AWS fellowship.
